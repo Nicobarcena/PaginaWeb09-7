@@ -28,6 +28,7 @@ header{
 }
 
 .head{
+    text-align: center;
     padding: 0;
     height: 100%;
     display: flex;
@@ -60,9 +61,8 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-   /* transition: transform .3s ease-in-out;*/
+    transition: transform .3s ease-in-out;
     transform: translate(110%);
- 
     box-shadow: 0 0 6px rgb(0,0,0,0.5);
 }
 
@@ -149,6 +149,7 @@ width: 40%;
     
 }
 .img-galeria{
+    object-fit: cover;
     width: 30%;
     display: block;
     margin-bottom: 15px;
@@ -165,14 +166,18 @@ width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(100%);
+    transform: translate(0);
     transition: trasnform .2s ease-in-out;
 }
 
+.show{
+transform: translate(0);}
+
 .agregar-imagen{
+    object-fit: cover;
     width: 60%;
     border-radius: 10px;
-    transform: scale(0);
+    transform: scale(1);
     transition: trasnform .3s .2s;
 }
 
@@ -185,4 +190,120 @@ width: 40%;
     right: 15px;
     width: 40px;
     cursor: pointer;
+}
+
+/*Expertos*/
+
+.experts{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.cont-expert{
+width: 30%;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.cont-expert img{
+width: 80%;
+display: block;
+margin: 0 auto;
+}
+
+.n-expert{
+display: inline-block;
+margin-top: 20px;
+width: 100%;
+font-weight: 600;
+}
+
+/*Footer*/
+
+footer{
+background: #9f8ad0;
+padding-bottom: 0.1px;
+
+}
+
+.footer-content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding-top: 60px;
+padding-bottom: 40px;
+}
+
+.contact-us{
+width: 40%;
+color: white;
+}
+
+.brand{
+font-weight: 500;
+font-size: 40px;
+}
+
+.brand+p{
+font-weight: 500;
+}
+
+.social-media{
+width: 10x  0%;
+display: flex;
+justify-content: flex-end;
+}
+
+.social-media-icon{
+display: inline-block;
+margin-left: 20px;
+width: 60px;
+height: 60px;
+border: 1px solid white;
+border-radius: 50%;
+text-align: center;
+color: white;
+
+}
+
+.social-media-icon:hover{
+background: #ffffff;
+color: #764ba2;
+}
+
+.social-media-icon i{
+font-size: 30px;
+line-height: 60px;
+
+}
+
+.line{
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+height: 2px;
+background: #ffffff;
+margin-bottom: 60px;
+}
+
+@media screen and (max-with:800px){
+.menu-navegacion{
+    width: 50vw;
+}
+.titulo{
+    font-size: 40px;
+}
+.contenedor-servicio img{
+    width: 80%;
+    margin-bottom: 40px
+}
+.checklist-servicios{
+    width: 80%;
+}
+.services{
+    margin-bottom: 30px;
+}
 }
